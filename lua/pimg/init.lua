@@ -1,7 +1,18 @@
 local opt = vim.opt
 
 opt.termguicolors = true -- Enable colors in terminal
-opt.hlsearch = true --Set highlight on search
+opt.hlsearch = false--Set highlight on search
+opt.incsearch = true
+
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+
+opt.smartindent  = true
+
+opt.wrap = false
+
 opt.number = true --Make line numbers default
 opt.relativenumber = true --Make relative number default
 opt.mouse = "a" --Enable mouse mode
