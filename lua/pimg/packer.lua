@@ -34,6 +34,17 @@ return require('packer').startup(function(use)
 		{'hrsh7th/nvim-cmp'},     -- Required
 		{'hrsh7th/cmp-nvim-lsp'}, -- Required
 		{'L3MON4D3/LuaSnip'},     -- Required
-	}
+	},
+    use {
+        "someone-stole-my-name/yaml-companion.nvim",
+        requires = {
+            { "neovim/nvim-lspconfig" },
+            { "nvim-lua/plenary.nvim" },
+            { "nvim-telescope/telescope.nvim" },
+        },
+        config = function()
+            require("telescope").load_extension("yaml_schema")
+        end,
+    }
 }
 end)
