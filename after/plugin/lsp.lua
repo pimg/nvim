@@ -1,41 +1,44 @@
-local lsp = require('lsp-zero').preset({})
+if not vim.g.vscode then
 
-lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
-end)
+    local lsp = require('lsp-zero').preset({})
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+    lsp.on_attach(function(client, bufnr)
+        lsp.default_keymaps({buffer = bufnr})
+    end)
 
-lsp.setup()
+    -- (Optional) Configure lua language server for neovim
+    require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
-local cmp = require('cmp')
+    lsp.setup()
 
-cmp.setup({
-mapping = {
+    local cmp = require('cmp')
 
-    -- ... Your other configuration ...
+    cmp.setup({
+        mapping = {
 
-    ['<C-Space>'] = cmp.mapping.complete(),
+            -- ... Your other configuration ...
 
-    ['<Tab>'] = function(fallback)
-      if not cmp.select_next_item() then
-        if vim.bo.buftype ~= 'prompt' and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
-      end
-    end,
+            ['<C-Space>'] = cmp.mapping.complete(),
 
-    ['<S-Tab>'] = function(fallback)
-      if not cmp.select_prev_item() then
-        if vim.bo.buftype ~= 'prompt' and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
-      end
-    end,
-  },
-})
+            ['<Tab>'] = function(fallback)
+                if not cmp.select_next_item() then
+                    if vim.bo.buftype ~= 'prompt' and has_words_before() then
+                        cmp.complete()
+                    else
+                        fallback()
+                    end
+                end
+            end,
+
+            ['<S-Tab>'] = function(fallback)
+                if not cmp.select_prev_item() then
+                    if vim.bo.buftype ~= 'prompt' and has_words_before() then
+                        cmp.complete()
+                    else
+                        fallback()
+                    end
+                end
+            end,
+        },
+    })
+end
