@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
         config = function()
             require("telescope").load_extension("yaml_schema")
         end,
-    }
+    },
+
+    use 'fedepujol/move.nvim'
 }
 end)
