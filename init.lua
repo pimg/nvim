@@ -135,6 +135,7 @@ require('lazy').setup({
   require 'plugins.autoformat',
   require 'plugins.misc',
   require 'plugins.comment',
+  require 'plugins.todo',
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
@@ -147,7 +148,6 @@ require('lazy').setup({
   require 'plugins.lsp.lazydev',
   require 'plugins.lsp.lsp',
   require 'plugins.autocomplete',
-  require 'plugins.todo',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
