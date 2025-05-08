@@ -64,3 +64,4 @@ vim.opt.inccommand = 'split' -- Preview substitutions live, as you type!
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 vim.g.have_nerd_font = true -- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.opt.showcmd = false
