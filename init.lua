@@ -136,6 +136,8 @@ require('lazy').setup({
   require 'plugins.misc',
   require 'plugins.comment',
   require 'plugins.todo',
+  require 'plugins.autoclose',
+  require 'plugins.golang',
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
