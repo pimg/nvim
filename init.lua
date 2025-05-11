@@ -89,7 +89,7 @@ require 'core.snippets'
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
+-- See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -135,7 +135,7 @@ require('lazy').setup({
   require 'plugins.misc',
   require 'plugins.comment',
   require 'plugins.todo',
-  require 'plugins.autoclose',
+  -- require 'plugins.autoclose',
   require 'plugins.golang',
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
@@ -143,7 +143,7 @@ require('lazy').setup({
   -- require 'plugins.debug',
   -- require 'plugins.indent_line',
   -- require 'plugins.lint',
-  -- require 'plugins.autopairs',
+  require 'plugins.autopairs',
   require 'plugins.neo-tree',
   -- LSP related plugins
   require 'plugins.lsp.lazydev',
