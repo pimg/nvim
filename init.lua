@@ -38,7 +38,6 @@ What is Kickstart?
     - (or HTML version): https://neovim.io/doc/user/lua-guide.html
 
 Kickstart Guide:
-
   TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
 
     If you don't know what this means, type the following:
@@ -152,6 +151,7 @@ require('lazy').setup({
   require 'plugins.autocomplete',
 
   require 'plugins.debug',
+  require 'plugins.zellij',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
