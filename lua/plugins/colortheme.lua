@@ -3,11 +3,11 @@ return { -- You can easily change to a different colorscheme.
   -- change the command in the config to whatever the name of that colorscheme is.
   --
   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  'Mofiqul/dracula.nvim',
+  'xiantang/darcula-dark.nvim',
   lazy = false,
-  priority = 1000, -- Make sure to load this before all the other start plugins.
+  priority = 1000,
   config = function()
-    require('dracula').setup()
-    vim.cmd.colorscheme 'dracula'
+    require('darcula').setup()
+    vim.cmd.colorscheme 'darcula-dark'
   end,
 }
