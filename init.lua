@@ -81,6 +81,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 require 'core.keymaps'
 require 'core.options'
 require 'core.snippets'
+require 'custom.floaterminal'
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
